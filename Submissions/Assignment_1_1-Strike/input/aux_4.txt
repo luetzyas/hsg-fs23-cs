@@ -1,0 +1,10 @@
+M11 = 44 69 64 20 79 6f 75 20 6b 6e 6f 77 20 74 68 61 74 20 65 6c 6c 69 70 73 65 73 20 61 72 65 20 6e 6f 74 20 65 6c 6c 69 70 74 69 63 20 63 75 72 76 65 73 3f
+C11 = 72 60 28 7a 16 c1 6f c4 8c a8 1c e4 cf cb b7 45 5e cc 60 85 08 df 03 b3 09 37 27 81 5f 6f ee c8 36 81 d9 73 c4 d4 ec 6a 52 ed c2 ac 83 06 14 e1 d2 ac 23
+
+C21 = 97 ac a9 9c 04 47 a9 e9 07 1a ff 1c 80 dd e9 35 bc 97 9a 83 b3 4c 64 1f 58 9c bf 71 a0 63 aa 44 08 0f b3 6a f8 b3 04 70 76 81 79 a3 a7 2f ac 41 a2 42 b3 a8 8a
+
+C22 = 4a fb ba 34 18 b7 f7 5c 1d 24 08 ec be cf e2 49 9c 24 c7 71 7e 53 cc 68 bd 9c 4e 2e 35 86 dc 08 f8 8d e1 59 5b d1 7f 0d 59 f0 c3 e3 c6 64 36 a6 95 c0 7a ac 9c ae 4f f7 b0 14 63 73 9d 58 8e f0 cb d1 72 47 c5 42 77 b3 c8 3b
+
+C31 = a8 1e cb 86 1b 43 34 94 fb 29 46 22 b3 57 34 9e 89 9f ce ed 02 13 a3 b0 c4 41 02 81 63 96 b4 9d 1f ef 45 6c 2b 7e
+
+C33 = ea 97 2b 53 5b a5 f9 40 f2 9e 6e d7 95 b1 47 28 84 04 52 b2 31 34 52 23 d4 2f 58 63 9f f1 2e 6f 0d 01 41 e2 d4
