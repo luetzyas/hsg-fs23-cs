@@ -2,8 +2,21 @@ import math
 import random
 from Cryptodome.Cipher import AES
 from Cryptodome.Util import Counter
-from Cryptodome.Random import get_random_bytes
-import os
+import hashlib
+from essential_generators import DocumentGenerator
+
+
+def read_input(file_path):
+    # Initialize an empty dictionary to store the values
+    values = []
+
+    # Open the file and process each line
+    with open(file_path, 'r') as m_file:
+        for line in m_file:
+            # Store the key-value pair in the dictionary
+            values.append(line.strip())
+
+    return values
 
 
 def read_input_int(file_path):
@@ -42,6 +55,16 @@ def read_input_bytes(file_path):
                 values[key] = value
 
     return values
+
+
+def prepare_collision_results(current, s):
+    return current.append(s)
+
+
+def write_file(file_path, results):
+    results_file = open(file_path, 'w')
+    results_file.writelines(results)
+    results_file.close()
 
 
 # This function checks if an integer is prime, returns True if it is and False otherwise
@@ -139,3 +162,55 @@ def get_iv():
           'C33': b'\x02' + base_b   # third
           }
     return iv
+
+
+def hash_sentence(s, size):
+    return hashlib.blake2s(s.encode(), digest_size=size).hexdigest()
+
+
+def generate_sentence(i):
+    generator = DocumentGenerator()
+    g_sentence = generator.sentence()
+    print(f"S{i}: " + g_sentence)
+    return g_sentence.lstrip()
+
+
+def generate_word():
+    generator = DocumentGenerator()
+    g_word = generator.word()
+    return random.choice(g_word).lstrip()
+
+
+def generate_sentence_words_fix():
+    # Predefined parts of speech
+    subjects = ["The cat", "A dog", "My neighbor", "The teacher", "Our team"]
+    verbs = ["saw", "met", "is considering", "likes", "dislikes"]
+    objects = ["a movie", "the play", "a good book", "the new student", "the game"]
+    adverbs = ["quickly", "slowly", "happily", "sadly", "quietly"]
+    adjectives = ["a beautiful", "an interesting", "a boring", "a thrilling", "an exciting"]
+
+    # Constructing the sentence
+    sentence = random.choice(subjects) + " " + \
+               random.choice(verbs) + " " + \
+               random.choice(adjectives) + " " + \
+               random.choice(objects) + " " + \
+               random.choice(adverbs) + "."
+
+    return sentence
+
+def generate_sentence_words():
+    # Predefined parts of speech
+    subjects = generate_word()
+    verbs = generate_word()
+    objects = generate_word()
+    adverbs = generate_word()
+    adjectives = generate_word()
+
+    # Constructing the sentence
+    sentence = random.choice(subjects) + " " + \
+               random.choice(verbs) + " " + \
+               random.choice(adjectives) + " " + \
+               random.choice(objects) + " " + \
+               random.choice(adverbs) + "."
+
+    return sentence
