@@ -38,7 +38,7 @@ sentences = []
 output_print = "No sentences found!"
 
 # control parameters
-size = 6  # bit size
+size = 7  # bit size
 generate = 0  # generate sentence true/false
 
 # clear result file
@@ -69,7 +69,7 @@ for s in sentences:
     if hash_value in hash_list and hash_list[hash_value] != s:
         output_print = f"Sentences found!\nS1: {s}\nS2: {hash_list[hash_value]}"
 
-        # write outputfile when found
+        # write outputfile when found -> unfortunately I didn't find a matching hash with different sentences
         file_res.write(f"{hash_list[hash_value]}\n{s}")
 
         break
